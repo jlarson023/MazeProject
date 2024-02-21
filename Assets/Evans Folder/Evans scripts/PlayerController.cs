@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -42,5 +43,18 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(Vector2.up * verticalInput * thrustSpeed);
         rb.AddForce(Vector2.right * horizontalInput * thrustSpeed);
         //------------------------
+
+        
+
     }
+    //Item Script
+    //------------------------
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            collision.transform.parent = newParent.transform;
+        }
+    }
+    //------------------------
 }

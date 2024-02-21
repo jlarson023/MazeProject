@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float rotationSpeed = 360; // Degrees per second
     public float thrustSpeed; // How fast the space ship moves
+    public GameObject playerItemFollow; //what the items follow
 
     //Player Inputs
     //------------------------
@@ -53,7 +54,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Item"))
         {
-            collision.transform.parent = newParent.transform;
+            collision.transform.parent = playerItemFollow.transform;
+            collision.transform.position = playerItemFollow.transform.position;
         }
     }
     //------------------------

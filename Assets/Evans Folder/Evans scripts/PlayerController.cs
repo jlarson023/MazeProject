@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     public float rotationSpeed = 360; // Degrees per second
     public float thrustSpeed; // How fast the space ship moves
+    public GameObject playerItemFollow; //what the items follow
 
     //Player Inputs
     //------------------------
@@ -42,5 +44,19 @@ public class PlayerController : MonoBehaviour
         rb.AddForce(Vector2.up * verticalInput * thrustSpeed);
         rb.AddForce(Vector2.right * horizontalInput * thrustSpeed);
         //------------------------
+
+        
+
     }
+    //Item Script
+    //------------------------
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Item"))
+        {
+            collision.transform.parent = playerItemFollow.transform;
+            collision.transform.position = playerItemFollow.transform.position;
+        }
+    }
+    //------------------------
 }

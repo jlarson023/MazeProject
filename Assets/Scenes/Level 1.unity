@@ -234,13 +234,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5942951868443673982, guid: 1e0cb5e44200856418b1faf3bbc91d41, type: 3}
       propertyPath: thrustSpeed
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5942951868443673982, guid: 1e0cb5e44200856418b1faf3bbc91d41, type: 3}
       propertyPath: rotationSpeed
       value: 50000
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5942951868691737809, guid: 1e0cb5e44200856418b1faf3bbc91d41, type: 3}
+      propertyPath: m_LinearDrag
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5942951868691737808, guid: 1e0cb5e44200856418b1faf3bbc91d41, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1e0cb5e44200856418b1faf3bbc91d41, type: 3}
 --- !u!1 &102220684
 GameObject:

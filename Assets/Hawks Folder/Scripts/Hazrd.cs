@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Hazrd : MonoBehaviour
 {
-     
+    Animator animator;
+    public float delay;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,10 @@ public class Hazrd : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+       
+        animator.SetTrigger("Explosion");
+
+        Destroy(gameObject, delay);
         Destroy(collision.gameObject);
     }
 }

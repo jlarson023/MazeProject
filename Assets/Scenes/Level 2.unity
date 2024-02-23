@@ -8398,7 +8398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0db7c8db3579b46879822647d8b742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: Level 2
+  nextLevel: Level 3
 --- !u!50 &2126871770
 Rigidbody2D:
   serializedVersion: 4
@@ -8542,7 +8542,7 @@ PrefabInstance:
     - target: {fileID: 4272960029645635987, guid: 69a9f4384ac250e4e86fa127d65ad3e5, type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 271951762167812358}
+      objectReference: {fileID: 0}
     - target: {fileID: 4272960029645635988, guid: 69a9f4384ac250e4e86fa127d65ad3e5, type: 3}
       propertyPath: m_Name
       value: CM vcam1

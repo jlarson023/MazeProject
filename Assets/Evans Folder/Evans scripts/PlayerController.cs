@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //Rotate Character do not touch
         //------------------------
